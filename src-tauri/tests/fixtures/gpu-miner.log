@@ -1,0 +1,1108 @@
+
+==============================================
+       Dinero GPU Miner 8.0.0
+       Backend: metal
+==============================================
+
+  RPC:     http://127.0.0.1:20996/
+  Address: rdin1pyrcppl2vdc6qs26vja0kecj9rhwcacujl70umdfhk3rt8uy5r4rszppfdn
+  Cookie:  /tmp/dinerominer-regtest/.cookie
+
+Verifying chain safety...
+Chain OK: main, height 131, 0 peers
+[GPU] Detecting devices...
+[OpenCL] Found device 0: Apple M4 Max (Apple) - 40 CUs @ 1000 MHz, 110100 MB
+[Metal] Found device 0: Apple M4 Max (Apple) - 110100 MB, max threadgroup 1024
+[GPU] Found 2 device(s):
+  [0] Apple M4 Max (OpenCL, 110100 MB, 40 CUs)
+  [0] Apple M4 Max (Metal, 110100 MB, 1024 CUs)
+[GPU] Selected backend: Metal
+[GPU] Backend created OK
+[Metal] Successfully initialized device: Apple M4 Max
+[GPU] initDevice(0) OK — Apple M4 Max
+[Metal] Using embedded kernel source
+[Metal] Kernel compiled from source successfully
+[Metal] Pipeline and buffers ready (threadgroup size: 256)
+[GPU] compileKernel OK
+[GPU] Ready to mine on Apple M4 Max (Metal)
+
+==============================================
+  GPU READY: Apple M4 Max (Metal)
+  Mining started!
+==============================================
+
+Job: height=132 bits=0x207fffff prev=59541f80761ff0a7...
+[Metal] Solution found! Nonce: 0x4c02
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 132
+║  Nonce:  19458 (0x00004c02)
+║  Hash:         79d6b65ce9f8d9d3ce1e0c2013b4522738fe2490f2c0ec4bacb68f91590e9dc9
+║  prev_hash:    59541f80761ff0a734ed196ce88c23dc5ada54386a3042274b886b5be18a8b23
+║  merkle_root:  c8d501b1a46c3077d8b441101a56675405fd43b90377bad37d15e4931f2a8f08
+║  utreexo_root: addafe7120a63901c0b0684f3fb09265d41bfac4f1710e9cd08513bd4f865826
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 132 (nonce 19458)
+  Daemon advanced to height 133
+Job: height=133 bits=0x207fffff prev=79d6b65ce9f8d9d3...
+[Metal] Solution found! Nonce: 0x3e1
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 133
+║  Nonce:  993 (0x000003e1)
+║  Hash:         41b87d89e5a621f06662e40a3cc07921089c17c2632f1edc11eea1f5eb7e2883
+║  prev_hash:    79d6b65ce9f8d9d3ce1e0c2013b4522738fe2490f2c0ec4bacb68f91590e9dc9
+║  merkle_root:  c199d42bba5eb8d11e017da13be56f0aa7b918c82080c7a5ae7a49d01c801c0f
+║  utreexo_root: 291d7b934e8efc7955c5cc194b5babd3d592c26755a366a598d7911f7c1f4937
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 133 (nonce 993)
+  Daemon advanced to height 134
+Job: height=134 bits=0x207fffff prev=41b87d89e5a621f0...
+[Metal] Solution found! Nonce: 0x1480
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 134
+║  Nonce:  5248 (0x00001480)
+║  Hash:         16582ee151412d4f8f1d4f97bd69b39449143ac932a4d612825c5b4f9efbad41
+║  prev_hash:    41b87d89e5a621f06662e40a3cc07921089c17c2632f1edc11eea1f5eb7e2883
+║  merkle_root:  f4bd3c377243dfd416d911633aa7b723d9e05055a20bfe2ba9fab58d820a1aa6
+║  utreexo_root: 8ac794249d8f773b05da79438e348bf8605c56aed88aaa753183243cc72908a0
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 134 (nonce 5248)
+  Daemon advanced to height 135
+Job: height=135 bits=0x207fffff prev=16582ee151412d4f...
+[Metal] Solution found! Nonce: 0x4c1
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 135
+║  Nonce:  1217 (0x000004c1)
+║  Hash:         6eb28e5c172d7e0ce1b6c73dcf0b99a2068d6e2dcae779250a6f80d7c86d7a87
+║  prev_hash:    16582ee151412d4f8f1d4f97bd69b39449143ac932a4d612825c5b4f9efbad41
+║  merkle_root:  dd29831672567448d5a5213200d06b71d859479e2529cb9a282cd82b0cddda5a
+║  utreexo_root: fe7331b63ac18024c9f6be277bb4280741d61ce07e329d2739ce8a7e786ee3e7
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 135 (nonce 1217)
+  Daemon advanced to height 136
+Job: height=136 bits=0x207fffff prev=6eb28e5c172d7e0c...
+[Metal] Solution found! Nonce: 0xbc0
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 136
+║  Nonce:  3008 (0x00000bc0)
+║  Hash:         2ce2f285feffea202802fadd58e3df479320e0eea1685c3f4c161ba1a3578efa
+║  prev_hash:    6eb28e5c172d7e0ce1b6c73dcf0b99a2068d6e2dcae779250a6f80d7c86d7a87
+║  merkle_root:  245300620ba1b7a4963c0d09e23ebcc85fc3cf3cb882da69546980d5b9e54cb5
+║  utreexo_root: 09902a06276cb459335f6280e2c60fc723db15d84713a1d015a29c46a1cffade
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 136 (nonce 3008)
+  Daemon advanced to height 137
+Job: height=137 bits=0x207fffff prev=2ce2f285feffea20...
+[Metal] Solution found! Nonce: 0x300
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 137
+║  Nonce:  768 (0x00000300)
+║  Hash:         3e306f425806d34877c2e0b26b1026ebba9da6f62120d0bdc6b72c89e1387649
+║  prev_hash:    2ce2f285feffea202802fadd58e3df479320e0eea1685c3f4c161ba1a3578efa
+║  merkle_root:  ba878eba576179ed2fd1ccc01692f66ebca92ff2bdb360c29d8156aa590ae490
+║  utreexo_root: ef29987523b75115dad4e2b3acb0b3e8d353415912534f3f0b410e089f59b542
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 137 (nonce 768)
+  Daemon advanced to height 138
+Job: height=138 bits=0x207fffff prev=3e306f425806d348...
+[Metal] Solution found! Nonce: 0x200
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 138
+║  Nonce:  512 (0x00000200)
+║  Hash:         18cd18003b30392e6c4ba3cdf133110206ed1705b8d32987ceaa675a27a6eb47
+║  prev_hash:    3e306f425806d34877c2e0b26b1026ebba9da6f62120d0bdc6b72c89e1387649
+║  merkle_root:  445e4ec8ff97995062c5e23e43204f8c0bc3c45849676b1a8a564dd7269b9154
+║  utreexo_root: 09319ace246000f43281fd8c0a8038122eaca2d864d34578d2b56ff80425192c
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 138 (nonce 512)
+  Daemon advanced to height 139
+Job: height=139 bits=0x207fffff prev=18cd18003b30392e...
+[Metal] Solution found! Nonce: 0x2e63
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 139
+║  Nonce:  11875 (0x00002e63)
+║  Hash:         4293392abfd015e12f7d384a2d271e3df3ea628415ecf8a5994b6078537d4ce2
+║  prev_hash:    18cd18003b30392e6c4ba3cdf133110206ed1705b8d32987ceaa675a27a6eb47
+║  merkle_root:  182a2c43336f720ea0fe10796fd53ed3925ee8bbd6cd32b81c22003f2e1cfbba
+║  utreexo_root: 417a5c8607834f7ba395d14d12fbaefeef9a5638b300eb660fa9f8e6156feae5
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 139 (nonce 11875)
+GPU: 26.84 MH/s | Total: 134 MH | Blocks: 8
+  Daemon advanced to height 140
+Job: height=140 bits=0x207fffff prev=4293392abfd015e1...
+[Metal] Solution found! Nonce: 0x1200
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 140
+║  Nonce:  4608 (0x00001200)
+║  Hash:         7abad020a27f4f6ec8b0c47364bd7576ded13558d78973242636651b79f82731
+║  prev_hash:    4293392abfd015e12f7d384a2d271e3df3ea628415ecf8a5994b6078537d4ce2
+║  merkle_root:  083345194780d12df185ddaf7cdfeece90d02672854df9efba3b9bc3a6171dcb
+║  utreexo_root: bb707a795ff5c35126d89adf2b5e2f553dc467b52f1c0bd4807c5f877d4d7ac2
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 140 (nonce 4608)
+  Daemon advanced to height 141
+Job: height=141 bits=0x207fffff prev=7abad020a27f4f6e...
+[Metal] Solution found! Nonce: 0x2940
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 141
+║  Nonce:  10560 (0x00002940)
+║  Hash:         42e47d8585063ae9aff7e749797dc793034eff325ff2cae1f9d6f4c6e7cfa226
+║  prev_hash:    7abad020a27f4f6ec8b0c47364bd7576ded13558d78973242636651b79f82731
+║  merkle_root:  06d898d419a0eb005f90563912a8f5d21d7b00a91d56b786a1f8379e942039f9
+║  utreexo_root: 3eac0f33b7c69631400fa021de507c38f211e680df754f9f9bb12a538eadd43a
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 141 (nonce 10560)
+  Daemon advanced to height 142
+Job: height=142 bits=0x207fffff prev=42e47d8585063ae9...
+[Metal] Solution found! Nonce: 0x2180
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 142
+║  Nonce:  8576 (0x00002180)
+║  Hash:         054d5d428e8a10e431cd455c5c8b5ed801501b2e3840a80b033354b7ef7fbd6b
+║  prev_hash:    42e47d8585063ae9aff7e749797dc793034eff325ff2cae1f9d6f4c6e7cfa226
+║  merkle_root:  866bfcd0c70f9a6cecc1956c7c85faa1826c8b566041073c6cbe817fe8e76f88
+║  utreexo_root: a7e3537dec2fe9bba9654faeb66db872e5abb4b67a072d53607715432538e5cc
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 142 (nonce 8576)
+  Daemon advanced to height 143
+Job: height=143 bits=0x207fffff prev=054d5d428e8a10e4...
+[Metal] Solution found! Nonce: 0x2222
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 143
+║  Nonce:  8738 (0x00002222)
+║  Hash:         1546eaa544f06dc9a40d709e00405c7f60819a93ef4f87f2baa346c667211110
+║  prev_hash:    054d5d428e8a10e431cd455c5c8b5ed801501b2e3840a80b033354b7ef7fbd6b
+║  merkle_root:  60d6242056b6a1226d914d9123d62b64894e18a229cc9bac8a3f2b1018c53098
+║  utreexo_root: b9af31c49ee5fc4452b704d43ab6674b9275597d59c65bc19337199f394fe335
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 143 (nonce 8738)
+  Daemon advanced to height 144
+Job: height=144 bits=0x207fffff prev=1546eaa544f06dc9...
+[Metal] Solution found! Nonce: 0x14a0
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 144
+║  Nonce:  5280 (0x000014a0)
+║  Hash:         33decea77b4f09e4ace5ad1d49211593ac889d621b90a83bcb2513d93ed0a3f3
+║  prev_hash:    1546eaa544f06dc9a40d709e00405c7f60819a93ef4f87f2baa346c667211110
+║  merkle_root:  e5f6ed419a6d21e3c91c81e7053f090188b4d3c5cda6ad33c1a1c5f0bb2b8b82
+║  utreexo_root: f4126c5328cb8cac706b9bd128033526ebf37540b7e6fb2640585bed66b11855
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 144 (nonce 5280)
+  Daemon advanced to height 145
+Job: height=145 bits=0x207fffff prev=33decea77b4f09e4...
+[Metal] Solution found! Nonce: 0x400
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 145
+║  Nonce:  1024 (0x00000400)
+║  Hash:         62abfc0343129d172026b339a3333810689398dfd4842b9fee3be361b3867c87
+║  prev_hash:    33decea77b4f09e4ace5ad1d49211593ac889d621b90a83bcb2513d93ed0a3f3
+║  merkle_root:  4055f9070a5503c81d2e5e8f75be63d93b75de927c184a55372fa2b2f29f6126
+║  utreexo_root: 82fc7b2b9b22c1bfc2db6624555a23adb013794cff6c3c7ce8de3dffa8939c00
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 145 (nonce 1024)
+  Daemon advanced to height 146
+Job: height=146 bits=0x207fffff prev=62abfc0343129d17...
+[Metal] Solution found! Nonce: 0xb20
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 146
+║  Nonce:  2848 (0x00000b20)
+║  Hash:         322d15c6a030121051eed27499935a8705bae32b91feaaa85ea629b91aea916d
+║  prev_hash:    62abfc0343129d172026b339a3333810689398dfd4842b9fee3be361b3867c87
+║  merkle_root:  fbd200882b8008a7b19247f6e4a30048d9dc9d3d864d4257eee1d7a74625f0ab
+║  utreexo_root: d6861985b70adbe1d4371217ebf08b69dc64775e40444240b9548f070cd65b89
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 146 (nonce 2848)
+  Daemon advanced to height 147
+Job: height=147 bits=0x207fffff prev=322d15c6a0301210...
+[Metal] Solution found! Nonce: 0x11c0
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 147
+║  Nonce:  4544 (0x000011c0)
+║  Hash:         64b5e281e17df29cb21503cfd36560f1920a9da01862ea0476afab16e74241d2
+║  prev_hash:    322d15c6a030121051eed27499935a8705bae32b91feaaa85ea629b91aea916d
+║  merkle_root:  2da45a63e57d8a366698aa2ed82042dabf01125ea7399ce86f7d551982418d6d
+║  utreexo_root: 107ad249128c65d2a1eabf7ac12b2a0c8becc48c1a776e54850bdf08e05c7e0c
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 147 (nonce 4544)
+GPU: 26.82 MH/s | Total: 268 MH | Blocks: 16
+  Daemon advanced to height 148
+Job: height=148 bits=0x207fffff prev=64b5e281e17df29c...
+[Metal] Solution found! Nonce: 0x3688
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 148
+║  Nonce:  13960 (0x00003688)
+║  Hash:         0fcf4628d9e5695a53c32a8ead3581626079826b7e9f3e72fbc55e076d7aa349
+║  prev_hash:    64b5e281e17df29cb21503cfd36560f1920a9da01862ea0476afab16e74241d2
+║  merkle_root:  3aebf348bd6c6b9465c8be39da4c093e620de2c002b61922f63ff46cdb78de08
+║  utreexo_root: 43dacbd9e9bc7b74f5c4455b9ab25bf165c1e6d192364954f36dab5375af5e72
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 148 (nonce 13960)
+  Daemon advanced to height 149
+Job: height=149 bits=0x207fffff prev=0fcf4628d9e5695a...
+[Metal] Solution found! Nonce: 0x1582
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 149
+║  Nonce:  5506 (0x00001582)
+║  Hash:         5082442af2f231d9b2de642ba2f5316c9e0dcb499db47ad38de584d16b6377d5
+║  prev_hash:    0fcf4628d9e5695a53c32a8ead3581626079826b7e9f3e72fbc55e076d7aa349
+║  merkle_root:  36af8c78d0c97ef9bea0696e5a60c9a3cc48ad016ead0f080f0cd9fc63710c44
+║  utreexo_root: c6593c6346f5657bb907cfbf68d2edc1414d9c577b68b7c0f3e7d74c7589ca7d
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 149 (nonce 5506)
+  Daemon advanced to height 150
+Job: height=150 bits=0x207fffff prev=5082442af2f231d9...
+[Metal] Solution found! Nonce: 0x3aa1
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 150
+║  Nonce:  15009 (0x00003aa1)
+║  Hash:         15165fa99a811cf5bca69eee50caf87c1ffa3f863c1d7d1ac56856d7f77bb8be
+║  prev_hash:    5082442af2f231d9b2de642ba2f5316c9e0dcb499db47ad38de584d16b6377d5
+║  merkle_root:  02c86140a000d022a6682ffd0e724376ae7a04b4e1a749b4426c8ee3985ffb39
+║  utreexo_root: 023d5468bd3fa21f0275e5dd9ee149108a9ae8f60bcf40360f2c0281ee4204f1
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 150 (nonce 15009)
+  Daemon advanced to height 151
+Job: height=151 bits=0x207fffff prev=15165fa99a811cf5...
+[Metal] Solution found! Nonce: 0x12e0
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 151
+║  Nonce:  4832 (0x000012e0)
+║  Hash:         586a6a763fd9261119bef7b5a8de8cde911fe73de988d1c929bedf4fd6dda70b
+║  prev_hash:    15165fa99a811cf5bca69eee50caf87c1ffa3f863c1d7d1ac56856d7f77bb8be
+║  merkle_root:  d380771b80b23979542acb983afecd575b5b7e13b1be97d124b0fe5717f85b6f
+║  utreexo_root: ce462fa61cc5117f84738a7272943f82ef9f4c2859ce493deb47038f654a429b
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 151 (nonce 4832)
+  Daemon advanced to height 152
+Job: height=152 bits=0x207fffff prev=586a6a763fd92611...
+[Metal] Solution found! Nonce: 0xb81
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 152
+║  Nonce:  2945 (0x00000b81)
+║  Hash:         3770597f0ad4b4e170521de676b1a016a7a06c248a8f89242ea0b03ea2e8aebe
+║  prev_hash:    586a6a763fd9261119bef7b5a8de8cde911fe73de988d1c929bedf4fd6dda70b
+║  merkle_root:  10f944b6cbfde19b1f7e303a57563c7f0fee9245d06d7866ffa79d4e76912b7f
+║  utreexo_root: 4da59fcd546c71dd6b3ead10c5d8aaf8ca075265f13495c1a59aa483d1ac6491
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 152 (nonce 2945)
+  Daemon advanced to height 153
+Job: height=153 bits=0x207fffff prev=3770597f0ad4b4e1...
+[Metal] Solution found! Nonce: 0x2a61
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 153
+║  Nonce:  10849 (0x00002a61)
+║  Hash:         2dc8a041f3a75e9c768b5f5a14a4fcfaaa2abefc2d69b2323fb72a3f29b9a77f
+║  prev_hash:    3770597f0ad4b4e170521de676b1a016a7a06c248a8f89242ea0b03ea2e8aebe
+║  merkle_root:  b8a73d404bfbef201ad9739bfeac644789acb0c06c1ad376e8e7d497f2cdcde6
+║  utreexo_root: e50f62de201f6a01ba99945a7da5fe11f09c58ee5bafd2afbeb537cafd8ea5b0
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 153 (nonce 10849)
+  Daemon advanced to height 154
+Job: height=154 bits=0x207fffff prev=2dc8a041f3a75e9c...
+[Metal] Solution found! Nonce: 0x7e3
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 154
+║  Nonce:  2019 (0x000007e3)
+║  Hash:         6203e189dca068df68d46824012d4365a018aec828665283a95d3b634898e3b5
+║  prev_hash:    2dc8a041f3a75e9c768b5f5a14a4fcfaaa2abefc2d69b2323fb72a3f29b9a77f
+║  merkle_root:  861e72786b67dc7e3239ab26443a4f1e2f67d37492e258d85e279f440747030d
+║  utreexo_root: d949a3fed6c620edaf072c940af679d9879403df26370d1e45fdaf35372ebb4c
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 154 (nonce 2019)
+  Daemon advanced to height 155
+Job: height=155 bits=0x207fffff prev=6203e189dca068df...
+[Metal] Solution found! Nonce: 0x880
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 155
+║  Nonce:  2176 (0x00000880)
+║  Hash:         50bbb8ad82d7a66ba57397e0b7d8b9e37090ca352490f647793aea1c5a60d629
+║  prev_hash:    6203e189dca068df68d46824012d4365a018aec828665283a95d3b634898e3b5
+║  merkle_root:  4a2388a64d4b25f66d3a6b116fadb79b9dcc0eea6c2d7da5e315eca512746ee0
+║  utreexo_root: 695c46695d92d1ef98fb6c6129af36b9db148d14c8e2be64ff49c1ee26e961e1
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 155 (nonce 2176)
+GPU: 26.83 MH/s | Total: 402 MH | Blocks: 24
+  Daemon advanced to height 156
+Job: height=156 bits=0x207fffff prev=50bbb8ad82d7a66b...
+[Metal] Solution found! Nonce: 0x2aa8
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 156
+║  Nonce:  10920 (0x00002aa8)
+║  Hash:         4b07eee31879a3c9c40b26c50676387a81fe1cc0b856376411b16152bdfde672
+║  prev_hash:    50bbb8ad82d7a66ba57397e0b7d8b9e37090ca352490f647793aea1c5a60d629
+║  merkle_root:  b2a3e1ef52fe07bafc4238bda840d25b417154864a51778ea48744751c834165
+║  utreexo_root: 08fe46a85e15340c8a69eddbe65cca5a029726f247d3a488c5a51c0977b79d03
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 156 (nonce 10920)
+  Daemon advanced to height 157
+Job: height=157 bits=0x207fffff prev=4b07eee31879a3c9...
+[Metal] Solution found! Nonce: 0x83
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 157
+║  Nonce:  131 (0x00000083)
+║  Hash:         6338e07ef637ec6971ad812e36419a95b54b9178d58c22620871a8df70228db6
+║  prev_hash:    4b07eee31879a3c9c40b26c50676387a81fe1cc0b856376411b16152bdfde672
+║  merkle_root:  2f6484c419b1824fc2e61ef94a472078cdf11d32f709bae2a25435550b4bb6f2
+║  utreexo_root: 3560139bca041eaca3d2c308cbdd3b5fcf0ab4b75cddfcc26b49cf35a77d068d
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 157 (nonce 131)
+  Daemon advanced to height 158
+Job: height=158 bits=0x207fffff prev=6338e07ef637ec69...
+[Metal] Solution found! Nonce: 0xac1
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 158
+║  Nonce:  2753 (0x00000ac1)
+║  Hash:         2dca08cf12702041925578392af7c5b0dcbb331e42e23088708198b0131432ed
+║  prev_hash:    6338e07ef637ec6971ad812e36419a95b54b9178d58c22620871a8df70228db6
+║  merkle_root:  eeab1b02b57468266c5825c5b50091430de0f748a085e3b3fc96cee8195f4a13
+║  utreexo_root: 85eb192721b4645ae9256b11ca98f6e4134f359af308e14bb9f6c3467e3d697f
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 158 (nonce 2753)
+  Daemon advanced to height 159
+Job: height=159 bits=0x207fffff prev=2dca08cf12702041...
+[Metal] Solution found! Nonce: 0x3c3
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 159
+║  Nonce:  963 (0x000003c3)
+║  Hash:         0ef4ad0d32776d7e2333c2c32451341a17fa15a4cee3cf703b640d96fd7b9fda
+║  prev_hash:    2dca08cf12702041925578392af7c5b0dcbb331e42e23088708198b0131432ed
+║  merkle_root:  ac064bc706c4459848d45bddf3ee32c2301f3b4e5efe2e04223257c93e862bf9
+║  utreexo_root: 73f2fe4104017e1eaa7debfc924298dd88c906f81d0aa3ba6dd2843b1de07d03
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 159 (nonce 963)
+  Daemon advanced to height 160
+Job: height=160 bits=0x207fffff prev=0ef4ad0d32776d7e...
+[Metal] Solution found! Nonce: 0x1620
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 160
+║  Nonce:  5664 (0x00001620)
+║  Hash:         7044d59d905f144a10e285c4c7e14e4edfbb57347fada8228c7b8c164a939953
+║  prev_hash:    0ef4ad0d32776d7e2333c2c32451341a17fa15a4cee3cf703b640d96fd7b9fda
+║  merkle_root:  0f4cac8aea588f996d5be34b7cd0080d6698ca95f6d0e192fde11d138c3a97b8
+║  utreexo_root: f87b9c05711f69c890f2949a9cfbf8a505ea91fb45e6179358703445d25b2cbb
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 160 (nonce 5664)
+  Daemon advanced to height 161
+Job: height=161 bits=0x207fffff prev=7044d59d905f144a...
+[Metal] Solution found! Nonce: 0x4c02
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 161
+║  Nonce:  19458 (0x00004c02)
+║  Hash:         4f0bba4cbb8dbb5d9e15cdfa64be11b6f159550621522818d551c16ce7bed232
+║  prev_hash:    7044d59d905f144a10e285c4c7e14e4edfbb57347fada8228c7b8c164a939953
+║  merkle_root:  6b459cbbdf38de72c1ea3bf9f37778b990cdd5ee8a86c681600a53d066ff8193
+║  utreexo_root: 0c1dd6882df560e88e46a9580ccdf45e0ef872340f1f1074cac2adbc67609716
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 161 (nonce 19458)
+  Daemon advanced to height 162
+Job: height=162 bits=0x207fffff prev=4f0bba4cbb8dbb5d...
+[Metal] Solution found! Nonce: 0x2860
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 162
+║  Nonce:  10336 (0x00002860)
+║  Hash:         3d744bf6c67aec9a353b34e691bda0820eb180c414c47fe0eba518fcd501ed6c
+║  prev_hash:    4f0bba4cbb8dbb5d9e15cdfa64be11b6f159550621522818d551c16ce7bed232
+║  merkle_root:  6abf3101de4ef3afd6c5c8092f2ecb1e5ba187f47ac87b31c29d2177a042baa9
+║  utreexo_root: 2243f9a0d04d16f8ab367422597477da20a9df5678c96e635962185966870ac1
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 162 (nonce 10336)
+  Daemon advanced to height 163
+Job: height=163 bits=0x207fffff prev=3d744bf6c67aec9a...
+[Metal] Solution found! Nonce: 0x5a2
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 163
+║  Nonce:  1442 (0x000005a2)
+║  Hash:         2c2433a037532c7be03af58f26bf89965377ed1c2f9cb15ba7250c5b0139e1b4
+║  prev_hash:    3d744bf6c67aec9a353b34e691bda0820eb180c414c47fe0eba518fcd501ed6c
+║  merkle_root:  3891c1f95e851e61f8b04abb66b5e4f89c07ad12b9fef07718a4671fad5720a6
+║  utreexo_root: 55e749cdf26c437043de4bcb9929f495f24374d12f20f8103af02bf43a2eb050
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 163 (nonce 1442)
+GPU: 26.82 MH/s | Total: 536 MH | Blocks: 32
+  Daemon advanced to height 164
+Job: height=164 bits=0x207fffff prev=2c2433a037532c7b...
+[Metal] Solution found! Nonce: 0x4841
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 164
+║  Nonce:  18497 (0x00004841)
+║  Hash:         7e0df7c39301ea059feb7d43a9f6d729a8ad1ad5b33e3bfa3bda4382040335e3
+║  prev_hash:    2c2433a037532c7be03af58f26bf89965377ed1c2f9cb15ba7250c5b0139e1b4
+║  merkle_root:  e5afbc3d3d05645f208923b835b14baf6ac62affa8f208204f94213b98fa4340
+║  utreexo_root: ae382dfa0a4040f3160a8721e4499c6e7832c66fbdecf4e552f0dec27b5d16b7
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 164 (nonce 18497)
+  Daemon advanced to height 165
+Job: height=165 bits=0x207fffff prev=7e0df7c39301ea05...
+[Metal] Solution found! Nonce: 0xc0
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 165
+║  Nonce:  192 (0x000000c0)
+║  Hash:         0369d9431d2803b7fe89ddafb74348568adf26ca9c7b509af800b34dfcf831e0
+║  prev_hash:    7e0df7c39301ea059feb7d43a9f6d729a8ad1ad5b33e3bfa3bda4382040335e3
+║  merkle_root:  e7d0c9a7f6793181d56d6d5955f5a2cc933c62896e9b7272511996871792ba1d
+║  utreexo_root: 0f8615781cd554416c69c0d3544cb74e224bf98ad8763d7687bd670acf51e803
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 165 (nonce 192)
+  Daemon advanced to height 166
+Job: height=166 bits=0x207fffff prev=0369d9431d2803b7...
+[Metal] Solution found! Nonce: 0x3c20
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 166
+║  Nonce:  15392 (0x00003c20)
+║  Hash:         37c4923a03e690df0db3c1399d4dc5dc533f633b09788f1ebc3e5a96f4363069
+║  prev_hash:    0369d9431d2803b7fe89ddafb74348568adf26ca9c7b509af800b34dfcf831e0
+║  merkle_root:  37b2b57894bd5da0de351a23adf04c94d14ae0d44c6c39c84c85625a7995e3f2
+║  utreexo_root: fa4654f44a1351c21a5f9de439bd09c1ff8ac4b4aa988bad7c2daf109d0f1e25
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 166 (nonce 15392)
+  Daemon advanced to height 167
+Job: height=167 bits=0x207fffff prev=37c4923a03e690df...
+[Metal] Solution found! Nonce: 0x1602
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 167
+║  Nonce:  5634 (0x00001602)
+║  Hash:         72cd5dd4a4af23be3620988b4259d6be20823988bbe691d48603fa5699cd2dfd
+║  prev_hash:    37c4923a03e690df0db3c1399d4dc5dc533f633b09788f1ebc3e5a96f4363069
+║  merkle_root:  feb135d4b1cd292f80ff6c69b45c6951b6c963c407f617d431fae563538d31a6
+║  utreexo_root: 13b3e564369e89a8644222b6a6c8c2b85c86f87ebb7bf322a28708fc16421029
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 167 (nonce 5634)
+  Daemon advanced to height 168
+Job: height=168 bits=0x207fffff prev=72cd5dd4a4af23be...
+[Metal] Solution found! Nonce: 0x21
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 168
+║  Nonce:  33 (0x00000021)
+║  Hash:         4af7965a0184862b59a538b41ccdec7af8cd21b98d40c3f0872bc88256909d32
+║  prev_hash:    72cd5dd4a4af23be3620988b4259d6be20823988bbe691d48603fa5699cd2dfd
+║  merkle_root:  2896aadc2d5e9df5ccfd2f6aa127731b4911421dbd91bb996d4138bf1316fe96
+║  utreexo_root: 3b78e892b8d338008185fcbaa94539d04ab54c5c710c31acbe9a188d8cfbb1cb
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 168 (nonce 33)
+  Daemon advanced to height 169
+Job: height=169 bits=0x207fffff prev=4af7965a0184862b...
+[Metal] Solution found! Nonce: 0x23e0
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 169
+║  Nonce:  9184 (0x000023e0)
+║  Hash:         5d1464093466d8b16029c1c0364ee634faa925591f2f32da3c05edde2ed73449
+║  prev_hash:    4af7965a0184862b59a538b41ccdec7af8cd21b98d40c3f0872bc88256909d32
+║  merkle_root:  5d61d5809af438a2a78cb51c13c697c32e82e6cc4beda18224327d3b78051c26
+║  utreexo_root: 7fc42c87523ae73453fdb2ef0b3e29808e2754e8223616dadfbe468c0a5f77ea
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 169 (nonce 9184)
+  Daemon advanced to height 170
+Job: height=170 bits=0x207fffff prev=5d1464093466d8b1...
+[Metal] Solution found! Nonce: 0x3023
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 170
+║  Nonce:  12323 (0x00003023)
+║  Hash:         7b335f3b53322272dd042b09958143423196f54a0ed1d9adf6bbc0855a675124
+║  prev_hash:    5d1464093466d8b16029c1c0364ee634faa925591f2f32da3c05edde2ed73449
+║  merkle_root:  c56eb0b43adc8ecc0f382a6088b0069726f8a5a5a6c6c070ca27bbff9050f00e
+║  utreexo_root: b09d848c4a521d3d760ed8746ea6be516f70a38dc70a71c78594cfdf161f911a
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 170 (nonce 12323)
+  Daemon advanced to height 171
+Job: height=171 bits=0x207fffff prev=7b335f3b53322272...
+[Metal] Solution found! Nonce: 0x2d00
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 171
+║  Nonce:  11520 (0x00002d00)
+║  Hash:         4c845aeef3cd1dbebb45d512ca16e16e0f2fb99a321e3ffecf3db37a5dd00f5d
+║  prev_hash:    7b335f3b53322272dd042b09958143423196f54a0ed1d9adf6bbc0855a675124
+║  merkle_root:  bbb5f5bd53bb490487d96a2feed5816db2992306735da81ee5e61883369f3cbb
+║  utreexo_root: b7685769d8e6a4f7f5cbd33274722224959239c4aeef5775dd5053bc153e699c
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+GPU: 26.82 MH/s | Total: 671 MH | Blocks: 39
+BLOCK ACCEPTED at height 171 (nonce 11520)
+  Daemon advanced to height 172
+Job: height=172 bits=0x207fffff prev=4c845aeef3cd1dbe...
+[Metal] Solution found! Nonce: 0x8e1
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 172
+║  Nonce:  2273 (0x000008e1)
+║  Hash:         62a0f4e8928529df35d082dbaff64e1c9fe6c6a6c3ee1c81e885c8695280221b
+║  prev_hash:    4c845aeef3cd1dbebb45d512ca16e16e0f2fb99a321e3ffecf3db37a5dd00f5d
+║  merkle_root:  3513d82d72642872f7cc6e653807fbc19ece227cdc6f97033458cc04baefce98
+║  utreexo_root: 25bb863465ab237b97334edef168e11f8b457cfec16cbf5abfec2bc9da523756
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 172 (nonce 2273)
+  Daemon advanced to height 173
+Job: height=173 bits=0x207fffff prev=62a0f4e8928529df...
+[Metal] Solution found! Nonce: 0xac0
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 173
+║  Nonce:  2752 (0x00000ac0)
+║  Hash:         299b3f336db7410865786f9c2ba8a2f2d4ff6f5803b35dd89860c544bcde7b31
+║  prev_hash:    62a0f4e8928529df35d082dbaff64e1c9fe6c6a6c3ee1c81e885c8695280221b
+║  merkle_root:  e3542a42cf8ce0ae08bd92d4de2f2642686b6ca1ccdf0dc87248ffc94dcdfb2e
+║  utreexo_root: 98fc9f95fe14b7ccb428e5df87e4cbb03205d3c0a1d858ac79ffecb3974c2d53
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 173 (nonce 2752)
+  Daemon advanced to height 174
+Job: height=174 bits=0x207fffff prev=299b3f336db74108...
+[Metal] Solution found! Nonce: 0x62
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 174
+║  Nonce:  98 (0x00000062)
+║  Hash:         5e05e3602225c77bc1881fbb5d474ade08bfbd20486cc7e84e122ed2f76baa52
+║  prev_hash:    299b3f336db7410865786f9c2ba8a2f2d4ff6f5803b35dd89860c544bcde7b31
+║  merkle_root:  0668dd0e731adc30546e820bc5f67f0c1971f96d19648401c052a6aa639970ee
+║  utreexo_root: 169277e23523eb95468876796154c3669a217030bfed0109f43fac21d281eef0
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 174 (nonce 98)
+  Daemon advanced to height 175
+Job: height=175 bits=0x207fffff prev=5e05e3602225c77b...
+[Metal] Solution found! Nonce: 0x4c9
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 175
+║  Nonce:  1225 (0x000004c9)
+║  Hash:         452c2b02531778f1c01253bf14ae27ad3754d7c4068fabf289d5974368624230
+║  prev_hash:    5e05e3602225c77bc1881fbb5d474ade08bfbd20486cc7e84e122ed2f76baa52
+║  merkle_root:  f51d0caba5475a075268d0b2eda6f6f83e48391ff3245320e00c6ace2e018b99
+║  utreexo_root: f85661571d64dd5432ee65d50ce20c05b8cb1e335f1b361dcf436432ed8c7ecd
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 175 (nonce 1225)
+  Daemon advanced to height 176
+Job: height=176 bits=0x207fffff prev=452c2b02531778f1...
+[Metal] Solution found! Nonce: 0xc1
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 176
+║  Nonce:  193 (0x000000c1)
+║  Hash:         07f286f5d0424b037fc07ced25e360fa10100a295b367a9e45411df6abe929de
+║  prev_hash:    452c2b02531778f1c01253bf14ae27ad3754d7c4068fabf289d5974368624230
+║  merkle_root:  6bdf3e2f0114e2e119ebcc928c184ba028b3444b36c3b9d1305055601bac68ae
+║  utreexo_root: d2b59f1dddd15248a93c81cf735ffc0487d9c1126a6e1e8a2153f131110cbc93
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 176 (nonce 193)
+  Daemon advanced to height 177
+Job: height=177 bits=0x207fffff prev=07f286f5d0424b03...
+[Metal] Solution found! Nonce: 0x380
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 177
+║  Nonce:  896 (0x00000380)
+║  Hash:         7c8fbb973f45b83b022c1387e549c20f97775215860f2c1ff6049a5a096cad55
+║  prev_hash:    07f286f5d0424b037fc07ced25e360fa10100a295b367a9e45411df6abe929de
+║  merkle_root:  803564f555672fa19b599e00eb3060c9e07906085173404855f223e691267bac
+║  utreexo_root: 78e866c67b1085f67301da93f73f5bd3a610929e29743de5f3d26b93014690b2
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 177 (nonce 896)
+  Daemon advanced to height 178
+Job: height=178 bits=0x207fffff prev=7c8fbb973f45b83b...
+[Metal] Solution found! Nonce: 0x2e00
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 178
+║  Nonce:  11776 (0x00002e00)
+║  Hash:         2bc4bf51026e84031994f6fe520091d3f626d017ece3e538b8f3d6e4392ccb40
+║  prev_hash:    7c8fbb973f45b83b022c1387e549c20f97775215860f2c1ff6049a5a096cad55
+║  merkle_root:  cd951445899f5457d5666a1e0871f072d0013ba2c46e4520b23978b03fbe1081
+║  utreexo_root: c05c86a670aaaa7e01bef4efd9f9437fbc7d2514720b0e16a53f29465b81d39d
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 178 (nonce 11776)
+GPU: 23.49 MH/s | Total: 788 MH | Blocks: 47
+  Daemon advanced to height 179
+Job: height=179 bits=0x207fffff prev=2bc4bf51026e8403...
+[Metal] Solution found! Nonce: 0x440
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 179
+║  Nonce:  1088 (0x00000440)
+║  Hash:         554175d4c46dc1ad2dc726214a3529001598b551ecdac068fede29d493c62fea
+║  prev_hash:    2bc4bf51026e84031994f6fe520091d3f626d017ece3e538b8f3d6e4392ccb40
+║  merkle_root:  b8e710ccb0635cff0d3da3285636bc81e4777a10614de0b087a1de0a60399ea0
+║  utreexo_root: d41963f7e0839fde30aad78ecc8bb1bfd74c48e79af89ac6bd12fa3718e07d8b
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 179 (nonce 1088)
+  Daemon advanced to height 180
+Job: height=180 bits=0x207fffff prev=554175d4c46dc1ad...
+[Metal] Solution found! Nonce: 0x1501
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 180
+║  Nonce:  5377 (0x00001501)
+║  Hash:         703ab1f7be3a8511de59ef958b5071d4e2dd565ac752806bf68f1dddee2b8195
+║  prev_hash:    554175d4c46dc1ad2dc726214a3529001598b551ecdac068fede29d493c62fea
+║  merkle_root:  67ecf8ec07d47e9195313d692aaf4e3e4553bc60009ba7ba66dad31121c0af2f
+║  utreexo_root: 13e7d7e4ae2ca71206acafd5ecb1b70b3afde1a0e0e12e92727b313f5cf0e36a
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 180 (nonce 5377)
+  Daemon advanced to height 181
+Job: height=181 bits=0x207fffff prev=703ab1f7be3a8511...
+[Metal] Solution found! Nonce: 0xec0
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 181
+║  Nonce:  3776 (0x00000ec0)
+║  Hash:         3cfa8852a3e1547cd2659ea2c1357255b2dbd626a96aa1d7ab08d07587a8f568
+║  prev_hash:    703ab1f7be3a8511de59ef958b5071d4e2dd565ac752806bf68f1dddee2b8195
+║  merkle_root:  fa0a94763c815e353817bfc33e40fe339822ce525df5995ee10027d8871acf23
+║  utreexo_root: 5ccaf8dfe80c7a216a9ded4a7bbe38f64269ab0f9047dcec1afaf1b6d2c2defb
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 181 (nonce 3776)
+  Daemon advanced to height 182
+Job: height=182 bits=0x207fffff prev=3cfa8852a3e1547c...
+[Metal] Solution found! Nonce: 0x2a21
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 182
+║  Nonce:  10785 (0x00002a21)
+║  Hash:         2d0c18f760f87a3ca2c435e5759faccf44b0faffead9b7ece06141af4c4a04cd
+║  prev_hash:    3cfa8852a3e1547cd2659ea2c1357255b2dbd626a96aa1d7ab08d07587a8f568
+║  merkle_root:  674314162b8777531a23d452e65a61bcf39a9051f86ac1dabd9989ed0888e19c
+║  utreexo_root: d9e1dadaee8a024d5b00daf197ef30078f79937b30f23d48edab0f3595cdaf21
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 182 (nonce 10785)
+  Daemon advanced to height 183
+Job: height=183 bits=0x207fffff prev=2d0c18f760f87a3c...
+[Metal] Solution found! Nonce: 0x7c1
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 183
+║  Nonce:  1985 (0x000007c1)
+║  Hash:         6d1f5e12583429fb82d41e17fd359e029e36ff068578fe2cc827c0b93551483a
+║  prev_hash:    2d0c18f760f87a3ca2c435e5759faccf44b0faffead9b7ece06141af4c4a04cd
+║  merkle_root:  a35b42f988a75d1ecad4f985a0507bbaa0db46c7d8aef9e3a8312c72ff9faa9e
+║  utreexo_root: 2ec366555b3af785b0a604fb794f6044ec5c08cac4e0f3965f1a46c0edb58978
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 183 (nonce 1985)
+  Daemon advanced to height 184
+Job: height=184 bits=0x207fffff prev=6d1f5e12583429fb...
+[Metal] Solution found! Nonce: 0x2a20
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 184
+║  Nonce:  10784 (0x00002a20)
+║  Hash:         739996da0796194deb7c8790cdbc5d8e9da23db68da0711be9b0e37165160b19
+║  prev_hash:    6d1f5e12583429fb82d41e17fd359e029e36ff068578fe2cc827c0b93551483a
+║  merkle_root:  199bfc125dc29e176cfae15c1f628aa45c32c91d2d20fa113ebeae8846a8c74f
+║  utreexo_root: 1912feabee14ff94955bd38110e7cfea0a0f700d9fbd4a513542e6d6ff06d79b
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 184 (nonce 10784)
+  Daemon advanced to height 185
+Job: height=185 bits=0x207fffff prev=739996da0796194d...
+[Metal] Solution found! Nonce: 0x2a20
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 185
+║  Nonce:  10784 (0x00002a20)
+║  Hash:         7a5e58993f764eadd65d0bc622a0c3d21ca29aec7a4c06a1ccea9051b3e81ab5
+║  prev_hash:    739996da0796194deb7c8790cdbc5d8e9da23db68da0711be9b0e37165160b19
+║  merkle_root:  c19bd308f83e28a9fb994052381a703d2d82f107a20328923792bca7631f2239
+║  utreexo_root: e91cf060730623d6a1c1e03c6a72e4b7fee45f2d04f7c5112afc2071723e373a
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 185 (nonce 10784)
+  Daemon advanced to height 186
+Job: height=186 bits=0x207fffff prev=7a5e58993f764ead...
+[Metal] Solution found! Nonce: 0x1740
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 186
+║  Nonce:  5952 (0x00001740)
+║  Hash:         015069b6f6b9517d2cb873a884b1c92dc8405f7348b2a6d3fa3b82d208cd0188
+║  prev_hash:    7a5e58993f764eadd65d0bc622a0c3d21ca29aec7a4c06a1ccea9051b3e81ab5
+║  merkle_root:  8fb005f201357b79b05befd12f1e38275d1f3bf0b7b8317ba9f0fd51e3f96259
+║  utreexo_root: f910a550576174e1e2d76c47fffdc5f0bf9b01eb3e006e064d8b5d9b6ec08e7c
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 186 (nonce 5952)
+GPU: 26.83 MH/s | Total: 922 MH | Blocks: 55
+  Daemon advanced to height 187
+Job: height=187 bits=0x207fffff prev=015069b6f6b9517d...
+[Metal] Solution found! Nonce: 0xbc3
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 187
+║  Nonce:  3011 (0x00000bc3)
+║  Hash:         2b4179680b5d2c030ed66ed60adf5f938ac25be09eae0ce787f890c911733f4d
+║  prev_hash:    015069b6f6b9517d2cb873a884b1c92dc8405f7348b2a6d3fa3b82d208cd0188
+║  merkle_root:  ce83a0a9a8072383ed82726b8dbec54b903f49ba5a7d8689ca24097e1c5920f2
+║  utreexo_root: feb9766cc0d8feb004f69b25cceefbabfbc3bafd4df465c3c0ce0413717f7783
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 187 (nonce 3011)
+  Daemon advanced to height 188
+Job: height=188 bits=0x207fffff prev=2b4179680b5d2c03...
+[Metal] Solution found! Nonce: 0x381
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 188
+║  Nonce:  897 (0x00000381)
+║  Hash:         3b973edf19e0e3b3d1a84d237a76507d2813cd386e91e3700767f8e1f84b22c1
+║  prev_hash:    2b4179680b5d2c030ed66ed60adf5f938ac25be09eae0ce787f890c911733f4d
+║  merkle_root:  ea73e1d478a71facc53cb406e394446f3c13a1affbe9bef282691695c9f0759e
+║  utreexo_root: 7717888c70fdbd0c951e02bf977b5fd56a9a106b800d507cafeb8e53203d2906
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 188 (nonce 897)
+  Daemon advanced to height 189
+Job: height=189 bits=0x207fffff prev=3b973edf19e0e3b3...
+[Metal] Solution found! Nonce: 0x3e0
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 189
+║  Nonce:  992 (0x000003e0)
+║  Hash:         2f2fc205128fd24a1f86555d5a82db10c90f2441524210a7d32f915b71c9bb94
+║  prev_hash:    3b973edf19e0e3b3d1a84d237a76507d2813cd386e91e3700767f8e1f84b22c1
+║  merkle_root:  ea4f5c96a2743b85903a4e6f66da9109f27f2baa2aa388f8524b8481f0c33847
+║  utreexo_root: fd3fdbb9d61f3ccd57cd3d4fb9631717b5d3b19617f1cb0a6b0c99e2177202a6
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 189 (nonce 992)
+  Daemon advanced to height 190
+Job: height=190 bits=0x207fffff prev=2f2fc205128fd24a...
+[Metal] Solution found! Nonce: 0xcc1
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 190
+║  Nonce:  3265 (0x00000cc1)
+║  Hash:         27a1fe2c2017d519f50394bea48ca86f2eccee5a38d9a0ca945d7a4dd333bf4d
+║  prev_hash:    2f2fc205128fd24a1f86555d5a82db10c90f2441524210a7d32f915b71c9bb94
+║  merkle_root:  0a7def8522a464633600dc005f1cddc3dcd02a5b1b51ea7077467523834a9253
+║  utreexo_root: 829664ba7aa1d3435c3ec6e11fad9079cb6803365c4ea540480cb8330e5d5734
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 190 (nonce 3265)
+  Daemon advanced to height 191
+Job: height=191 bits=0x207fffff prev=27a1fe2c2017d519...
+[Metal] Solution found! Nonce: 0x2f60
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 191
+║  Nonce:  12128 (0x00002f60)
+║  Hash:         01c6dbd305b055f8d9766dbef342455698bd2c92f52838453b4e428c125d490e
+║  prev_hash:    27a1fe2c2017d519f50394bea48ca86f2eccee5a38d9a0ca945d7a4dd333bf4d
+║  merkle_root:  25b9b9eefa8da2c04cfecacae10b5b88a600bb9947c7ecf6e328a0f6785837d8
+║  utreexo_root: 5dcfa404253dcf7ff6422ab39ccb2dbf36bcc67eee87982cd5bb414a26d7cf67
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 191 (nonce 12128)
+  Daemon advanced to height 192
+Job: height=192 bits=0x207fffff prev=01c6dbd305b055f8...
+[Metal] Solution found! Nonce: 0x2302
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 192
+║  Nonce:  8962 (0x00002302)
+║  Hash:         7829174f35d09d78439150862a9b7e0b15d0dd95bb7be0adbf66f4462e05c60b
+║  prev_hash:    01c6dbd305b055f8d9766dbef342455698bd2c92f52838453b4e428c125d490e
+║  merkle_root:  f98639658ce60ddd328754195f2f7fdc96b7bd631d0e010e308b4637eda17c5a
+║  utreexo_root: 10c53249adad7198864a9d83faa5584c90e586bbd85cf471a2ce4fee5128ac74
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 192 (nonce 8962)
+  Daemon advanced to height 193
+Job: height=193 bits=0x207fffff prev=7829174f35d09d78...
+[Metal] Solution found! Nonce: 0x48
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 193
+║  Nonce:  72 (0x00000048)
+║  Hash:         3d2a9ba724ca6566d161ac9572cce4983bc295d08946a7ef7374405122aa6d7e
+║  prev_hash:    7829174f35d09d78439150862a9b7e0b15d0dd95bb7be0adbf66f4462e05c60b
+║  merkle_root:  974e86fed0129d46572a4a7f6feb911c8511b4a9241a91caeb3c6623ba2af7b9
+║  utreexo_root: b632420aef27b052e5f80b2b98fa279d362b4e0a1fa84c88ef634c511c93998d
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 193 (nonce 72)
+  Daemon advanced to height 194
+Job: height=194 bits=0x207fffff prev=3d2a9ba724ca6566...
+[Metal] Solution found! Nonce: 0x763
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 194
+║  Nonce:  1891 (0x00000763)
+║  Hash:         596a9a62bec1d0eaa558918429717675eddc66027f9cd83ed43a75e030b5b9af
+║  prev_hash:    3d2a9ba724ca6566d161ac9572cce4983bc295d08946a7ef7374405122aa6d7e
+║  merkle_root:  041b51286a51fde55e85dbedca4a099df1028d9c7acaa03025f85327d419dc74
+║  utreexo_root: c3b3aa43e0baca30eb0606955d8a774be43734b111020b71457723324b884514
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 194 (nonce 1891)
+GPU: 26.82 MH/s | Total: 1056 MH | Blocks: 63
+  Daemon advanced to height 195
+Job: height=195 bits=0x207fffff prev=596a9a62bec1d0ea...
+[Metal] Solution found! Nonce: 0x502
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 195
+║  Nonce:  1282 (0x00000502)
+║  Hash:         332636d56d89176fec199c8a1bea6255ff21953293541d13a51e7e136014f503
+║  prev_hash:    596a9a62bec1d0eaa558918429717675eddc66027f9cd83ed43a75e030b5b9af
+║  merkle_root:  6a9ae5e9209916319e795feb32fe59ef5f7c2d430a82a26c421cd3761d8e2c59
+║  utreexo_root: 4a6fb7e3f2b3363a5e0fffab5f92bc9211644f95380342d8df652d9a74f46770
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 195 (nonce 1282)
+  Daemon advanced to height 196
+Job: height=196 bits=0x207fffff prev=332636d56d89176f...
+[Metal] Solution found! Nonce: 0x4c61
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 196
+║  Nonce:  19553 (0x00004c61)
+║  Hash:         194c1c1e8c6b547d6b0cb39b05d76146a5148c76e6682ac837f66670e207fc8c
+║  prev_hash:    332636d56d89176fec199c8a1bea6255ff21953293541d13a51e7e136014f503
+║  merkle_root:  193972ae59fca0595db2cf9b82c501902eea01861755d0632bbd2156359cd91e
+║  utreexo_root: a98ec854b35d5e6414a35aed3a0f59632516ce4d113c605b3e657f08b3a4204c
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 196 (nonce 19553)
+  Daemon advanced to height 197
+Job: height=197 bits=0x207fffff prev=194c1c1e8c6b547d...
+[Metal] Solution found! Nonce: 0x601
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 197
+║  Nonce:  1537 (0x00000601)
+║  Hash:         19447799559f58491d9bbfdc7a0f62c52410d213cabacb2974f2c35bc158f426
+║  prev_hash:    194c1c1e8c6b547d6b0cb39b05d76146a5148c76e6682ac837f66670e207fc8c
+║  merkle_root:  9ee5c8ff107514791836ceef8a2c5a0e02b359d752f474a9b6f4014b28d4ed62
+║  utreexo_root: 60af0cf2fced00191ce22017f573ba6177449a328bff97b861a4282fb2478ead
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 197 (nonce 1537)
+  Daemon advanced to height 198
+Job: height=198 bits=0x207fffff prev=19447799559f5849...
+[Metal] Solution found! Nonce: 0x3062
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 198
+║  Nonce:  12386 (0x00003062)
+║  Hash:         5bbd5961704f1fa6948b62198eea4ccf05aa26c3fc60a216a75014aa9e606acb
+║  prev_hash:    19447799559f58491d9bbfdc7a0f62c52410d213cabacb2974f2c35bc158f426
+║  merkle_root:  88a8e8ffb4bace77b79dde71bd70cdae01bb8340a3546d6a8fab384910b9117e
+║  utreexo_root: f5a2450ba91e56f87f0a7908ee623a6be974a4bef54ca2b4af534711b8d0c079
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 198 (nonce 12386)
+  Daemon advanced to height 199
+Job: height=199 bits=0x207fffff prev=5bbd5961704f1fa6...
+[Metal] Solution found! Nonce: 0x6c0
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 199
+║  Nonce:  1728 (0x000006c0)
+║  Hash:         26c35bdc79e052b8af7bee75e19033ecd2b36df632b90e1ff78e0452f3d5b03e
+║  prev_hash:    5bbd5961704f1fa6948b62198eea4ccf05aa26c3fc60a216a75014aa9e606acb
+║  merkle_root:  f4eb449a5d3ea6fe9735941f286bd2d0e06b9f37bab95d59b351e238476fc944
+║  utreexo_root: 6370a779412339b5e2554d638dc8b4a07bb483bb5250764374635cd64f711e6c
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 199 (nonce 1728)
+  Daemon advanced to height 200
+Job: height=200 bits=0x207fffff prev=26c35bdc79e052b8...
+[Metal] Solution found! Nonce: 0x620
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 200
+║  Nonce:  1568 (0x00000620)
+║  Hash:         460d75fbe299c71da337827aa7992922c1e3ccc2e1eb5320033262a2449830cf
+║  prev_hash:    26c35bdc79e052b8af7bee75e19033ecd2b36df632b90e1ff78e0452f3d5b03e
+║  merkle_root:  9226ada578cd9cf0923bb136e33a5cfafc8d5c027cb4df7fd6ec0c59e5765d4d
+║  utreexo_root: 6f576972aa0d3303872aca7b3d179d2bf82415205d3a146ec3aae3cd76168b68
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 200 (nonce 1568)
+  Daemon advanced to height 201
+Job: height=201 bits=0x207fffff prev=460d75fbe299c71d...
+[Metal] Solution found! Nonce: 0x2a60
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 201
+║  Nonce:  10848 (0x00002a60)
+║  Hash:         7d642f1ebfb98c2dd535bf8321cf7586500755fb49c7971bfd496f87904e3837
+║  prev_hash:    460d75fbe299c71da337827aa7992922c1e3ccc2e1eb5320033262a2449830cf
+║  merkle_root:  8ffe3d48329f85e3be4daaf1e6b6197d2cc8d87495daf930e4ca54d48e4ab4ec
+║  utreexo_root: 8e3add51165d433b60b7c394c31226b9342f267b43d098b0ded28b6c95894e16
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+BLOCK ACCEPTED at height 201 (nonce 10848)
+  Daemon advanced to height 202
+Job: height=202 bits=0x207fffff prev=7d642f1ebfb98c2d...
+[Metal] Solution found! Nonce: 0x2831
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  *** BLOCK FOUND! ***
+║  Height: 202
+║  Nonce:  10289 (0x00002831)
+║  Hash:         75ebca9673dde094fb15118e4e1b544526d383f80bc74c8d5c739f6d4da1747a
+║  prev_hash:    7d642f1ebfb98c2dd535bf8321cf7586500755fb49c7971bfd496f87904e3837
+║  merkle_root:  bf7e2f0def74646c540302ad75b5cb76970c8d7df98b6f5395dc75c0300ef7fc
+║  utreexo_root: 850d82ce234efd846995671e2a37ab8b0a17449cb08e72ea4ce95ccefc26172e
+║  nBits:        0x207fffff
+╚══════════════════════════════════════════════════════════════════════╝
+GPU: 26.82 MH/s | Total: 1191 MH | Blocks: 70
+BLOCK ACCEPTED at height 202 (nonce 10289)
+
+GPU Miner stopped. Found 71 blocks.
