@@ -1,3 +1,4 @@
+pub mod settings;
 pub mod supervisor;
 pub mod stats;
 pub mod worksource;
