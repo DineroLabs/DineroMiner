@@ -23,10 +23,11 @@
 - **Windows/Linux sidecars:** `fetch-sidecars.sh` currently sources the local
   macOS dinero-v8 build only. Wire the dinero release tarballs
   (linux-x86_64, linux-aarch64 for Chromebook/Crostini, windows-x64) into the
-  script before shipping those platforms.
-- **Pool + GPU:** blocked on upstream stratum support in `dinero-gpu-miner`
-  (dinero-v8). The UI greys the combination out until then.
-- **Pool availability:** the default endpoint 173.249.200.59:3333 had no
-  stratum listener as of 2026-08-13 — redeploy the pool before advertising
-  pool mode, and replace the source-derived section of
-  `src-tauri/tests/fixtures/dinero-stratum-worker.log` with a live capture.
+  script before shipping those platforms; the SV2 pool miners additionally
+  need dinero-sv2 cross-builds.
+- **Pool key rotation:** the app pins the SV2 pool's static pubkey
+  (`worksource::DEFAULT_POOL_PUBKEY`). If the pool key rotates, ship an
+  updated default (users can also override `pool_pubkey` in settings.json).
+- **Pool health:** if miners report instant session drops and stale job
+  heights, the pool's template loop is wedged — `systemctl restart
+  dinero-sv2-pool` on SJ fixes it (seen 2026-08-14).
