@@ -38,12 +38,16 @@ itself; a GUI bug can therefore never produce a bad share or an invalid block.
 
 | Mode | CPU | GPU |
 |------|-----|-----|
-| Pool | ✅ `dinero-stratum-worker --stratum … --user <address>[.worker] --threads N` | ❌ gap — the GPU miner speaks only node RPC today |
-| Solo | ✅ `dinero-miner --rpc <url> --address <addr> --threads N` | ✅ `dinero-gpu-miner --rpc <url> --address <addr> --backend auto\|metal\|cuda\|opencl` |
+| Pool (SV2, shared PPLNS) | ✅ `dinero-sv2-miner --pool <host:4444> --server-pubkey <pin> --payout-script-hex <p2tr> --reward-mode shared --json` | ✅ `dinero-sv2-gpu-miner … --backend auto\|metal\|cuda\|opencl --json` |
+| Solo (node RPC) | ✅ `dinero-miner --rpc <url> --address <addr> --threads N` | ✅ `dinero-gpu-miner --rpc <url> --address <addr> --backend …` |
 
-Pool+GPU requires a stratum backend in `dinero-gpu-miner` (upstream dinero-v8
-work, out of scope for this app). The UI greys out that combination with an
-explanatory tooltip rather than pretending.
+REVISED 2026-08-14: the live fleet pool is the SV2 deployment
+(`173.249.200.59:4444`, Noise-encrypted, static pubkey pinned in the app:
+`3c879d90c9bb430493dfbf02cecbb93c3ae0d9d6c31d0757595e353fbe927417`), not
+legacy stratum — pool mode uses the SV2 miners with their `--json` GUI event
+stream, and pool+GPU is fully supported. The pool payout is a 34-byte P2TR
+script derived in-app from the entered `din1p…` address (Taproot required for
+pool mode; other valid addresses get a specific error).
 
 ## Architecture (Approach A — thin shell over sidecars)
 

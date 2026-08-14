@@ -1,0 +1,49 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #0a0a0a; --fg: #d8d8d0; --dim: #6a6a64; --line: #222;
+  --accent: #f7931a; /* the single allowed accent */
+}
+html, body { height: 100%; }
+body {
+  background: var(--bg); color: var(--fg);
+  font: 13px/1.6 "SF Mono", "Cascadia Mono", "JetBrains Mono", monospace;
+  overflow-x: hidden;
+}
+#matrix { position: fixed; inset: 0; z-index: 0; }
+main { position: relative; z-index: 1; max-width: 460px; margin: 0 auto; padding: 28px 20px; }
+header { letter-spacing: 6px; color: var(--dim); border-bottom: 1px solid var(--line);
+         padding-bottom: 12px; margin-bottom: 20px; }
+label { display: block; color: var(--dim); text-transform: lowercase; margin: 14px 0 4px; }
+input, select, button, pre {
+  font: inherit; color: var(--fg); background: rgba(10,10,10,0.82);
+  border: 1px solid var(--line); padding: 8px 10px;
+}
+input:focus, select:focus { outline: none; border-color: var(--dim); }
+.row { display: flex; gap: 8px; align-items: center; }
+.row input[type="text"], .row input:not([type]) { flex: 1; }
+.seg { margin-top: 14px; }
+.seg button { flex: 1; color: var(--dim); cursor: pointer; }
+.seg button.on { color: var(--fg); border-color: var(--dim); }
+.seg button:disabled { opacity: .35; cursor: not-allowed; }
+.error { color: #c96a6a; min-height: 1.4em; margin-top: 4px; }
+.note { color: var(--dim); margin-top: 4px; }
+.hidden { display: none !important; }
+#threads { flex: 1; accent-color: var(--accent); }
+#start { width: 100%; margin-top: 20px; padding: 12px;
+         color: var(--accent); border-color: var(--accent);
+         letter-spacing: 4px; cursor: pointer; }
+#start:disabled { color: var(--dim); border-color: var(--line); cursor: not-allowed; }
+#start.running { color: var(--bg); background: var(--accent); }
+#stats { margin-top: 24px; border-top: 1px solid var(--line); padding-top: 16px; }
+#hashrate { font-size: 40px; color: #fff; background: transparent; }
+.small { color: var(--dim); margin-top: 6px; gap: 14px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--dim); display: inline-block; }
+.dot.on { background: var(--accent); }
+#blocks { margin-top: 20px; }
+#blocklog { max-height: 180px; overflow-y: auto; color: #e6e6e0;
+            border-color: var(--line); white-space: pre-wrap; }
+details { margin-top: 24px; color: var(--dim); }
+details summary { cursor: pointer; }
+details input { width: 100%; }
+#rawlog { margin-top: 10px; max-height: 140px; overflow-y: auto; color: var(--dim);
+          border-color: var(--line); white-space: pre-wrap; }
