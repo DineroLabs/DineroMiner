@@ -5,6 +5,7 @@
   "identifier": "org.dinerolabs.dinerominer",
   "build": { "frontendDist": "../ui" },
   "app": {
+    "withGlobalTauri": true,
     "windows": [
       {
         "title": "DineroMiner",
