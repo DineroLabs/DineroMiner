@@ -15,6 +15,27 @@ function seg(groupId) {
   return document.querySelector(`#${groupId} .on`).dataset.v;
 }
 
+let blockNo = 0;
+// SV2 pool block solutions arrive as one JSON line — render them as clean
+// label/value blocks. Solo miners' box-drawing output passes through verbatim.
+function formatBlockLine(line) {
+  try {
+    const j = JSON.parse(line);
+    if (j.event === "share_submitted" && j.meets_block_target) {
+      blockNo += 1;
+      return [
+        `■ block found  #${blockNo}  ${new Date().toLocaleTimeString()}`,
+        `  hash   ${j.hash}`,
+        `  nonce  ${j.nonce}`,
+        `  tries  ${Number(j.tries).toLocaleString()}`,
+        `  mode   ${j.reward_mode}`,
+        "",
+      ].join("\n");
+    }
+  } catch (_) { /* not JSON — solo box output, show as-is */ }
+  return line;
+}
+
 function collectSettings() {
   return {
     address: $("address").value.trim(),
@@ -115,11 +136,9 @@ window.addEventListener("DOMContentLoaded", async () => {
         (e.Stats.blocks_found ? ` / blocks ${e.Stats.blocks_found}` : "");
       if (e.Stats.last_error) $("addr-error").textContent = e.Stats.last_error;
     } else if (e.BlockLine !== undefined) {
-      // Verbatim block output: hash, utreexo merkle root, nonce, height, …
-      // exactly as the miner prints it.
       $("blocks").classList.remove("hidden");
       const bl = $("blocklog");
-      bl.textContent = (bl.textContent + "\n" + e.BlockLine)
+      bl.textContent = (bl.textContent + "\n" + formatBlockLine(e.BlockLine))
         .split("\n").slice(-400).join("\n");
       bl.scrollTop = bl.scrollHeight;
     } else if (e.RawLine !== undefined) {
