@@ -33,11 +33,19 @@ done
 kill $MINER 2>/dev/null || true
 [ "$H" -gt "$H0" ] || { echo "FAIL: no block mined"; exit 1; }
 
-HASH=$("$B/dinero-cli" -regtest -datadir="$D" getbestblockhash)
-BLOCK=$("$B/dinero-cli" -regtest -datadir="$D" getblock "$HASH" 2)
-echo "$BLOCK" | grep -q "$ADDR" || {
-  echo "FAIL: coinbase does not pay $ADDR"
-  echo "$BLOCK" | head -40
+# getbestblockhash returns a JSON-quoted string; getblock verbosity 2 lists
+# txids only (no decoded outputs), so the coinbase-pays-address assertion goes
+# through the wallet ledger: the fresh datadir's wallet owns exactly one
+# address ($ADDR), so any immature coinbase balance proves the coinbase paid it.
+HASH=$("$B/dinero-cli" -regtest -datadir="$D" getbestblockhash | tr -d '"')
+"$B/dinero-cli" -regtest -datadir="$D" getblock "$HASH" 2 | grep -q '"height"' || {
+  echo "FAIL: best block $HASH not retrievable"
   exit 1
 }
-echo "PASS: block $H coinbase pays $ADDR"
+IMMATURE=$("$B/dinero-cli" -regtest -datadir="$D" getbalance \
+  | python3 -c "import json,sys; print(json.load(sys.stdin).get('immature', 0))")
+python3 -c "import sys; sys.exit(0 if float('$IMMATURE') > 0 else 1)" || {
+  echo "FAIL: wallet holding $ADDR has no immature coinbase balance"
+  exit 1
+}
+echo "PASS: block $H mined; coinbase credited $IMMATURE DIN (immature) to the wallet owning $ADDR"
