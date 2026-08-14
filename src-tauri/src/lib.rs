@@ -1,3 +1,4 @@
+pub mod stats;
 pub mod worksource;
 pub mod address;
 pub fn run() {
