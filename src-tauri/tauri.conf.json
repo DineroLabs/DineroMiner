@@ -3,7 +3,9 @@
   "productName": "DineroMiner",
   "version": "0.1.0",
   "identifier": "org.dinerolabs.dinerominer",
-  "build": { "frontendDist": "../ui" },
+  "build": {
+    "frontendDist": "../ui"
+  },
   "app": {
     "withGlobalTauri": true,
     "windows": [
@@ -16,11 +18,19 @@
         "backgroundColor": "#0a0a0a"
       }
     ],
-    "security": { "csp": "default-src 'self'; style-src 'self' 'unsafe-inline'" }
+    "security": {
+      "csp": "default-src 'self'; style-src 'self' 'unsafe-inline'"
+    }
   },
   "bundle": {
     "active": true,
     "targets": "all",
-    "resources": ["binaries/*"]
+    "resources": [
+      "binaries/*"
+    ],
+    "macOS": {
+      "signingIdentity": "Developer ID Application: DineroLabs LLC (JXJS6ZA5FJ)",
+      "minimumSystemVersion": "13.0"
+    }
   }
 }
