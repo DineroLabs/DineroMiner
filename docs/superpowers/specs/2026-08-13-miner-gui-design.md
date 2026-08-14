@@ -106,6 +106,24 @@ Tauri application: Rust core, small web-view UI. Four units with hard seams:
      JSON settings file in the platform config dir. Addresses are public
      data; no secret storage needed.
 
+## Visual design (owner direction, 2026-08-13)
+
+Minimalist terminal aesthetic. Black is the dominant color; the app should
+read like a black terminal screen:
+
+- Single dark theme only (no light mode). Background pure/near black
+  (`#000`–`#0a0a0a`); text off-white/grey; monospaced type throughout.
+- Accents stay monochrome (white/greys). At most one restrained highlight
+  (e.g., Dinero orange) for the Start action and the connection dot; nothing
+  else colored.
+- **Background animation:** a subtle black-and-whitish "matrix / hash
+  stream" — dim falling hex/hash characters behind the content, low
+  contrast (greys on black), GPU-cheap (canvas, throttled frame rate,
+  pauses when the window is hidden). It must never compete with the stats;
+  when mining is stopped, it idles at even lower intensity.
+- Hashrate is the hero element: large monospaced number, plain white.
+- No cards, no shadows, no gradients — rules/dividers and spacing only.
+
 ## Data flow
 
 Pool: UI → WorkSource resolves `dinero-stratum-worker` args → MinerProcess
