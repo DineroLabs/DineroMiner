@@ -1,3 +1,4 @@
+pub mod supervisor;
 pub mod stats;
 pub mod worksource;
 pub mod address;
