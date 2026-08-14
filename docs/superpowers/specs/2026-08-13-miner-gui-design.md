@@ -122,6 +122,11 @@ read like a black terminal screen:
   pauses when the window is hidden). It must never compete with the stats;
   when mining is stopped, it idles at even lower intensity.
 - Hashrate is the hero element: large monospaced number, plain white.
+- **Block-found detail (owner requirement):** when a block is found, the app
+  shows the miner's full block output verbatim — hash, utreexo merkle root,
+  nonce/extranonce, block height, and whatever else the binary prints —
+  line-for-line in a "blocks" panel, in white on black, exactly like the CLI
+  does today. The GUI adds no reformatting beyond monospace display.
 - No cards, no shadows, no gradients — rules/dividers and spacing only.
 
 ## Data flow
