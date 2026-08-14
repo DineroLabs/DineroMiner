@@ -86,15 +86,19 @@ pub fn start_mining(app: AppHandle, state: State<MinerState>, s: Settings) -> Re
         threads: s.threads,
         gpu_backend: s.gpu_backend.clone(),
         pool_endpoint: s.pool_endpoint.clone(),
+        pool_pubkey: s.pool_pubkey.clone(),
         worker_name: s.worker_name.clone(),
         solo_rpc_url: s.solo_rpc_url.clone(),
     };
     let inv = worksource::resolve(&cfg).map_err(|e| match e {
-        worksource::ResolveError::PoolGpuUnsupported => {
-            "Pool + GPU isn't supported yet — the GPU miner speaks node RPC only.".to_string()
-        }
         worksource::ResolveError::MissingSoloRpc => "Enter a node RPC URL for solo mining.".to_string(),
         worksource::ResolveError::MissingPoolEndpoint => "Enter a pool endpoint.".to_string(),
+        worksource::ResolveError::MissingPoolPubkey => {
+            "Pool pubkey missing — reset settings or fill it in settings.json.".to_string()
+        }
+        worksource::ResolveError::NotTaproot => {
+            "Pool payouts need a Taproot (din1p…) address.".to_string()
+        }
     })?;
     let dir = sidecar_dir(&app)?;
     let program = dir.join(inv.program);

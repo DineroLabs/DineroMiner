@@ -31,16 +31,7 @@ function collectSettings() {
 function selectSeg(groupId, v) {
   document.querySelectorAll(`#${groupId} button`).forEach((b) =>
     b.classList.toggle("on", b.dataset.v === v));
-  const solo = seg("mode") === "solo";
-  $("solo-row").classList.toggle("hidden", !solo);
-  // Matrix gap: pool + gpu is not a thing yet.
-  const gpuBtn = document.querySelector('#device button[data-v="gpu"]');
-  gpuBtn.disabled = !solo;
-  $("matrix-gap").classList.toggle("hidden", solo);
-  if (!solo && seg("device") === "gpu") {
-    document.querySelectorAll("#device button").forEach((b) =>
-      b.classList.toggle("on", b.dataset.v === "cpu"));
-  }
+  $("solo-row").classList.toggle("hidden", seg("mode") !== "solo");
   const gpu = seg("device") === "gpu";
   $("cpu-row").classList.toggle("hidden", gpu);
   $("gpu-row").classList.toggle("hidden", !gpu);

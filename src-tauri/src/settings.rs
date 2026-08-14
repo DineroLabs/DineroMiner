@@ -1,4 +1,4 @@
-use crate::worksource::{Device, GpuBackend, Mode, DEFAULT_POOL_ENDPOINT};
+use crate::worksource::{Device, GpuBackend, Mode, DEFAULT_POOL_ENDPOINT, DEFAULT_POOL_PUBKEY};
 use serde::{Deserialize, Serialize};
 use std::path::Path;
 
@@ -10,8 +10,14 @@ pub struct Settings {
     pub threads: Option<u32>,
     pub gpu_backend: GpuBackend,
     pub pool_endpoint: String,
+    #[serde(default = "default_pool_pubkey")]
+    pub pool_pubkey: String,
     pub worker_name: String,
     pub solo_rpc_url: String,
+}
+
+fn default_pool_pubkey() -> String {
+    DEFAULT_POOL_PUBKEY.to_string()
 }
 
 impl Default for Settings {
@@ -23,6 +29,7 @@ impl Default for Settings {
             threads: None,
             gpu_backend: GpuBackend::Auto,
             pool_endpoint: DEFAULT_POOL_ENDPOINT.to_string(),
+            pool_pubkey: DEFAULT_POOL_PUBKEY.to_string(),
             worker_name: hostname::get()
                 .ok()
                 .and_then(|h| h.into_string().ok())

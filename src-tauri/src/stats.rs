@@ -37,9 +37,66 @@ fn counter(line: &str, key: &str) -> Option<u64> {
 /// event lines increment so the UI reacts immediately, and the next stat line
 /// re-syncs. Box-drawing lines (╔ ║ ╚) are the miner's block-found display and
 /// pass through verbatim as `Block`.
+/// SV2 miners with `--json` emit one JSON object per line with an `"event"`
+/// key (schema: dinero-sv2 `crates/dinero-sv2-miner/src/main.rs::emit`).
+fn parse_json_event(t: &str, stats: &mut MinerStats) -> Option<LineOutcome> {
+    let v: serde_json::Value = serde_json::from_str(t).ok()?;
+    let event = v.get("event")?.as_str()?;
+    Some(match event {
+        "hashrate" => {
+            if let Some(mhs) = v.get("mhs").and_then(|m| m.as_f64()) {
+                stats.hashrate_hs = mhs * 1e6;
+            }
+            LineOutcome::Parsed
+        }
+        "share_accepted" => {
+            if let Some(n) = v.get("accepted_count").and_then(|n| n.as_u64()) {
+                stats.shares_accepted = n;
+            } else {
+                stats.shares_accepted += 1;
+            }
+            LineOutcome::Parsed
+        }
+        "share_rejected" => {
+            stats.shares_rejected += 1;
+            LineOutcome::Parsed
+        }
+        "share_submitted" => {
+            if v.get("meets_block_target").and_then(|b| b.as_bool()) == Some(true) {
+                stats.blocks_found += 1;
+                // The line carries the full solution (hash, nonce, tries) —
+                // shown verbatim in the blocks panel.
+                LineOutcome::Block
+            } else {
+                LineOutcome::Parsed
+            }
+        }
+        "session_end" => {
+            if v.get("reason").and_then(|r| r.as_str()) == Some("error") {
+                stats.last_error = v
+                    .get("error")
+                    .and_then(|e| e.as_str())
+                    .map(|e| e.to_string())
+                    .or_else(|| Some("session ended with error".into()));
+            }
+            LineOutcome::Parsed
+        }
+        // Connection/job lifecycle events carry no counters the UI shows.
+        "startup" | "connected" | "channel_open" | "set_new_prev_hash" | "new_job"
+        | "window_status" | "reconnect_wait" => LineOutcome::Parsed,
+        _ => LineOutcome::Unparsed,
+    })
+}
+
 pub fn parse_line(line: &str, stats: &mut MinerStats) -> LineOutcome {
     let l = line.trim_end();
     let t = l.trim_start();
+
+    if t.starts_with('{') {
+        if let Some(outcome) = parse_json_event(t, stats) {
+            return outcome;
+        }
+    }
 
     // Block box: header increments, details display-only.
     if t.starts_with('╔') || t.starts_with('╚') || t.starts_with('║') {
@@ -188,6 +245,43 @@ mod tests {
             .map(|(l, _)| l.as_str())
             .collect();
         assert!(details.iter().any(|l| l.contains("utreexo_root")));
+    }
+    #[test]
+    fn sv2_json_fixture_yields_hashrate_and_the_mainnet_block() {
+        // Captured live 2026-08-14 against the SJ pool — this session actually
+        // found mainnet block 0000003a861a… (pool log: "SHARED block ACCEPTED").
+        let s = feed("tests/fixtures/sv2-miner-json.log");
+        assert!((s.hashrate_hs - 4_190_000.0).abs() < 50_000.0, "mhs 4.19 expected");
+        assert_eq!(s.blocks_found, 1, "meets_block_target share = block found");
+        assert!(s.last_error.is_none());
+    }
+    #[test]
+    fn sv2_block_solution_line_is_block_outcome() {
+        let mut s = MinerStats::default();
+        let line = r#"{"event":"share_submitted","hash":"00000abc","meets_block_target":true,"nonce":"0x1","reward_mode":"shared","sequence_number":1,"tries":5}"#;
+        assert_eq!(parse_line(line, &mut s), LineOutcome::Block);
+        assert_eq!(s.blocks_found, 1);
+        let plain = r#"{"event":"share_submitted","hash":"00000abc","meets_block_target":false,"nonce":"0x2","reward_mode":"shared","sequence_number":2,"tries":5}"#;
+        assert_eq!(parse_line(plain, &mut s), LineOutcome::Parsed);
+        assert_eq!(s.blocks_found, 1, "plain shares are not blocks");
+    }
+    #[test]
+    fn sv2_share_accepted_count_is_authoritative() {
+        let mut s = MinerStats::default();
+        parse_line(r#"{"event":"share_accepted","accepted_count":7,"channel_id":2,"last_seq":9,"shares_sum":7}"#, &mut s);
+        assert_eq!(s.shares_accepted, 7);
+        parse_line(r#"{"event":"share_rejected","channel_id":2,"error":"stale-job","sequence_number":10}"#, &mut s);
+        assert_eq!(s.shares_rejected, 1);
+        assert!(s.last_error.is_none(), "a rejected share is not a session error");
+    }
+    #[test]
+    fn sv2_session_end_error_sets_last_error() {
+        let mut s = MinerStats::default();
+        parse_line(r#"{"error":"noise handshake","event":"session_end","reason":"error"}"#, &mut s);
+        assert_eq!(s.last_error.as_deref(), Some("noise handshake"));
+        let mut t = MinerStats::default();
+        parse_line(r#"{"event":"session_end","reason":"clean-close","blocks_found":0}"#, &mut t);
+        assert!(t.last_error.is_none(), "clean close is not an error");
     }
     #[test]
     fn accepted_line_is_block_outcome_but_does_not_double_count() {

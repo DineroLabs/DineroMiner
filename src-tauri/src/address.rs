@@ -7,6 +7,7 @@ pub enum AddressError {
     WrongNetwork,
     BadChecksum,
     Invalid,
+    NotTaproot,
 }
 
 impl AddressError {
@@ -21,8 +22,24 @@ impl AddressError {
             }
             AddressError::BadChecksum => "Checksum doesn't match — the address has a typo.",
             AddressError::Invalid => "Not a valid Dinero address.",
+            AddressError::NotTaproot => {
+                "Pool payouts need a Taproot (din1p…) address; this one is a different type."
+            }
         }
     }
+}
+
+/// The 34-byte P2TR scriptPubKey (`OP_1 OP_PUSHBYTES_32 <program>`) as hex —
+/// the form `dinero-sv2-miner --payout-script-hex` expects. Consensus sends
+/// the block reward / PPLNS split to this script.
+pub fn payout_script_hex(input: &str) -> Result<String, AddressError> {
+    let s = validate_address(input)?;
+    let (_hrp, version, program) =
+        bech32::segwit::decode(&s).map_err(|_| AddressError::Invalid)?;
+    if version != bech32::Fe32::P || program.len() != 32 {
+        return Err(AddressError::NotTaproot);
+    }
+    Ok(format!("5120{}", hex::encode(program)))
 }
 
 pub fn validate_address(input: &str) -> Result<String, AddressError> {
@@ -90,6 +107,27 @@ mod tests {
     fn rejects_testnet_and_regtest() {
         assert_eq!(validate_address("tdin1qqqqqq"), Err(AddressError::WrongNetwork));
         assert_eq!(validate_address("rdin1qqqqqq"), Err(AddressError::WrongNetwork));
+    }
+    #[test]
+    fn payout_script_is_34_byte_p2tr() {
+        let hex1 = payout_script_hex(VALID_1).unwrap();
+        assert_eq!(hex1.len(), 68, "34 bytes = 68 hex chars");
+        assert!(hex1.starts_with("5120"), "OP_1 OP_PUSHBYTES_32 prefix");
+        assert_eq!(payout_script_hex(VALID_1).unwrap(), hex1, "deterministic");
+        assert_ne!(payout_script_hex(VALID_2).unwrap(), hex1);
+    }
+    #[test]
+    fn payout_script_rejects_non_taproot() {
+        // Encode a valid-checksum witness-v0 din address; only v1/32-byte
+        // (Taproot) can receive SV2 pool payouts.
+        let hrp = bech32::Hrp::parse("din").unwrap();
+        let v0 = bech32::segwit::encode(hrp, bech32::Fe32::Q, &[0u8; 20]).unwrap();
+        assert_eq!(payout_script_hex(&v0), Err(AddressError::NotTaproot));
+    }
+    #[test]
+    fn payout_script_rejects_invalid_input() {
+        assert_eq!(payout_script_hex("tdin1qqqqqq"), Err(AddressError::WrongNetwork));
+        assert_eq!(payout_script_hex("garbage"), Err(AddressError::Invalid));
     }
     #[test]
     fn rejects_garbage() {
