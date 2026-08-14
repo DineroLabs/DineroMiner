@@ -31,3 +31,10 @@
 - **Pool health:** if miners report instant session drops and stale job
   heights, the pool's template loop is wedged — `systemctl restart
   dinero-sv2-pool` on SJ fixes it (seen 2026-08-14).
+- **Notarization vs sidecar hashes:** Tauri leaves `Resources/binaries/*` with
+  their original ad-hoc signatures (hashes still match sidecars.lock — the
+  runtime gate holds). Notarization, however, requires Developer-ID +
+  hardened-runtime signatures on every Mach-O: sign the sidecars FIRST, then
+  run `fetch-sidecars.sh`-style hashing over the SIGNED binaries to regenerate
+  the lock, then `cargo tauri build`. Order matters or the gate will reject
+  the shipped binaries.
