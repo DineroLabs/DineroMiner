@@ -1,1 +1,1 @@
-{}
+{"default":{"identifier":"default","description":"Main window: core APIs (events, window) for the miner UI","local":true,"windows":["main"],"permissions":["core:default"]}}

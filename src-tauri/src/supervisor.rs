@@ -219,3 +219,41 @@ mod tests {
             .any(|e| matches!(e, MinerEvent::Stats(st) if st.last_error.as_deref() == Some("error: boom"))));
     }
 }
+
+#[cfg(test)]
+mod live_probe {
+    use super::*;
+    /// Diagnostic: drive the REAL sv2 miner through the real Supervisor for
+    /// 15 s and print every event. Run explicitly:
+    ///   cargo test live_probe -- --ignored --nocapture
+    #[test]
+    #[ignore]
+    fn real_miner_events_flow() {
+        let (tx, rx) = std::sync::mpsc::channel();
+        let s = Supervisor::start(
+            std::path::PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("binaries/dinero-sv2-miner"),
+            vec![
+                "--pool".into(), "173.249.200.59:4444".into(),
+                "--server-pubkey".into(),
+                "3c879d90c9bb430493dfbf02cecbb93c3ae0d9d6c31d0757595e353fbe927417".into(),
+                "--payout-script-hex".into(),
+                "5120ea448139c9c82c9bfb95b583938085f232488b0c26cd4cf36611ab4dbce0d2d0".into(),
+                "--reward-mode".into(), "shared".into(),
+                "--user-agent".into(), "supervisor-probe".into(),
+                "--threads".into(), "1".into(),
+                "--json".into(),
+            ],
+            tx,
+        );
+        let deadline = std::time::Instant::now() + std::time::Duration::from_secs(15);
+        let mut n = 0u32;
+        while std::time::Instant::now() < deadline {
+            if let Ok(e) = rx.recv_timeout(std::time::Duration::from_millis(200)) {
+                n += 1;
+                println!("EVT {n}: {e:?}");
+            }
+        }
+        s.stop();
+        assert!(n > 3, "no events flowed from the real miner");
+    }
+}

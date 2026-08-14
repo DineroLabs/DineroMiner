@@ -18,15 +18,6 @@
     </div>
     <div id="addr-error" class="error"></div>
 
-    <div class="row seg" id="mode">
-      <button data-v="pool" class="on">POOL</button><button data-v="solo">SOLO</button>
-    </div>
-    <div id="solo-row" class="hidden">
-      <label for="rpc">node rpc url</label>
-      <input id="rpc" spellcheck="false" placeholder="http://user:pass@host:20998" />
-      <div class="note">a remote server can waste your hashes but cannot steal a found reward — the coinbase pays the address above</div>
-    </div>
-
     <div class="row seg" id="device">
       <button data-v="cpu" class="on">CPU</button><button data-v="gpu">GPU</button>
     </div>
@@ -55,6 +46,14 @@
     </section>
 
     <details><summary>advanced</summary>
+      <div class="row seg" id="mode">
+        <button data-v="pool" class="on">POOL</button><button data-v="solo">SOLO</button>
+      </div>
+      <div id="solo-row" class="hidden">
+        <label for="rpc">node rpc url</label>
+        <input id="rpc" spellcheck="false" placeholder="http://user:pass@host:20998" />
+        <div class="note">solo needs a dinero node — a remote server can waste your hashes but cannot steal a found reward; the coinbase pays the address above</div>
+      </div>
       <label for="pool-endpoint">pool endpoint</label>
       <input id="pool-endpoint" spellcheck="false" />
       <label for="worker">worker name</label>
